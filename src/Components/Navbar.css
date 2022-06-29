@@ -1,0 +1,153 @@
+.Navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  border-bottom: 2px solid var(--light-grayish-blue);
+}
+.Navbar .menu {
+  display: none;
+  margin-right: 20px;
+  cursor: pointer;
+  width: 20px;
+}
+.Navbar .menu img {
+  width: 100%;
+}
+.Navbar .logo {
+  letter-spacing: -2px;
+}
+.Navbar .links {
+  width: 100%;
+  display: flex;
+  margin-left: 30px;
+  list-style: none;
+  color: var(--grayish-blue);
+}
+.Navbar .links li {
+  padding: 45px 0;
+  margin: 0 10px;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+}
+.Navbar .links .close {
+  display: none;
+  margin: 15px;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+.Navbar .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsla(0, 0%, 0%, 0.75);
+  z-index: 1;
+  visibility: hidden;
+}
+
+@media (max-width: 375px) { /* Mobile screen */
+  .Navbar .menu {
+    display: block;
+  }
+  .Navbar .logo {
+    flex-grow: 1;
+  }
+  .Navbar .links {
+    display: block;
+    position: fixed;
+    margin: 0;
+    padding: 15px;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 65%;
+    height: 100%;
+    background-color: var(--white);
+    color: var(--black);
+    visibility: hidden;
+  }
+  .Navbar .links.active {
+    visibility: visible;
+  }
+  .Navbar .links li {
+    display: block;
+    padding: 10px 0;
+  }
+  .Navbar .links .close {
+    display: block;
+  }
+  .Navbar .overlay {
+    visibility: visible;
+  }
+}
+.Navbar .links li.active,
+.Navbar .links li:hover {
+  color: var(--dark-grayish-blue);
+  border-bottom: 3px solid var(--orange);
+}
+.Navbar .basket {
+  margin: 30px;
+  cursor: pointer;
+  position: relative;
+}
+@media (max-width: 375px) {
+}
+.Navbar .basket .number {
+  display: none;
+}
+.Navbar .basket.active .number {
+  display: block;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: var(--orange);
+  color: var(--white);
+  font-size: 10px;
+  padding: 0 6px;
+  border-radius: 10px;
+}
+.Navbar .basket svg:hover path {
+  fill: var(--very-dark-blue);
+}
+.Navbar .basket.active svg path {
+  fill: var(--very-dark-blue);
+}
+.Navbar .avatar {
+  width: 80px;
+  border-radius: 50%;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.Navbar .avatar img {
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+}
+.Navbar .avatar:hover img {
+  border: 2px solid var(--orange);
+  border-radius: 50%;
+}
+@media (max-width: 375px) {
+  .Navbar .avatar {
+    width: 40px;
+  }
+}
+
+/*
+### Primary
+
+- Orange: hsl(26, 100%, 55%)
+- Pale orange: hsl(25, 100%, 94%)
+
+### Neutral
+
+- Very vark blue: hsl(220, 13%, 13%)
+- Dark grayish blue: hsl(219, 9%, 45%)
+- Grayish blue: hsl(220, 14%, 75%)
+- Light grayish blue: hsl(223, 64%, 98%)
+- White: hsl(0, 0%, 100%)
+- Black (with 75% opacity for lightbox background): hsl(0, 0%, 0%)
+
+*/

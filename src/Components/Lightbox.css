@@ -1,0 +1,54 @@
+
+.Lightbox.active {
+  visibility: visible;
+}
+.Lightbox {
+  visibility: hidden;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Lightbox .preview {
+  width: 70% !important;
+}
+.Lightbox.active .preview .image .switch {
+  visibility: visible ;
+}
+.Lightbox .preview .image .switch .previous,
+.Lightbox .preview .image .switch .next {
+  margin: -5% !important;
+}
+.Lightbox .preview .image .switch .previous:hover svg path,
+.Lightbox .preview .image .switch .next:hover svg path{
+  stroke: var(--orange);
+}
+.Lightbox .preview .thumbnails {
+  width: 80%;
+  margin: 0 10%;
+}
+.Lightbox .preview .close {
+  text-align: end;
+  margin-bottom: 10px;
+}
+.Lightbox .preview .close svg {
+  cursor: pointer;
+  transition: .3s;
+}
+.Lightbox .preview .close svg path {
+  fill: var(--white);
+}
+.Lightbox .preview .close svg:hover path {
+  fill: var(--orange);
+}
+@media (max-width: 375px) {
+  .Lightbox {
+    display: none;
+  }
+}

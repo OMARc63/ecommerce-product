@@ -1,0 +1,218 @@
+.MainProduct {
+  background-color: var(--white);
+  padding: 60px 0;
+}
+.MainProduct .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.MainProduct .preview,
+.MainProduct .information {
+  width: 50%;
+  padding: 7%;
+}
+.MainProduct img {
+  width: 100%;
+  height: 100%;
+}
+.MainProduct .preview img {
+  border-radius: 15px;
+}
+.MainProduct .preview .image {
+  margin-bottom: 30px;
+  position: relative;
+  cursor: pointer;
+}
+.MainProduct .preview .image .switch {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.MainProduct .preview .image .switch .previous,
+.MainProduct .preview .image .switch .next{
+  background-color: var(--white);
+  width: 10%;
+  height: 10%;
+  text-align: center;
+  border-radius: 50%;
+  margin: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.MainProduct .preview .image .switch .previous:hover svg path,
+.MainProduct .preview .image .switch .next:hover svg path {
+  stroke: var(--orange);
+}
+.MainProduct .preview .image .switch img {
+  width: 30%;
+  height: auto;
+}
+.MainProduct .preview .thumbnails {
+  display: flex;
+  justify-content: space-between;
+}
+.MainProduct .preview .thumbnails li {
+  border-radius: 15px;
+  width: 20%;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+.MainProduct .preview .thumbnails li.active {
+  background-color: var(--white);
+  border: 2px solid var(--orange);
+}
+.MainProduct .preview .thumbnails li:hover {
+  background-color: var(--white);
+}
+.MainProduct .preview .thumbnails li:hover img, 
+.MainProduct .preview .thumbnails li.active img {
+  opacity: .5;
+}
+.MainProduct .information .company{
+  text-transform: uppercase;
+  color: var(--orange);
+}
+.MainProduct .information .title {
+  font-size: 50px;
+  margin: 20px 0 40px;
+}
+.MainProduct .information .desc {
+  color: var(--grayish-blue);
+  line-height: 1.7;
+}
+.MainProduct .information .price {
+  margin: 25px 0 35px;
+}
+.MainProduct .information .price .total {
+  display: inline-block;
+  font-size: 30px;
+  color: var(--black);
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+.MainProduct .information .price .reduction {
+  color: var(--orange);
+  background-color: var(--pale-orange);
+  padding: 5px 8px 5px 5px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  position: relative;
+  top: -5px;
+}
+.MainProduct .information .price .prev {
+  display: block;
+  color: var(--grayish-blue);
+  text-decoration: line-through;
+}
+.MainProduct .information .checkout {
+  display: flex;
+}
+.MainProduct .information .checkout .edit {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  background-color: var(--light-grayish-blue);
+  border-radius: 10px;
+  margin-right: 15px;
+}
+.MainProduct .information .checkout .edit span {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+}
+.MainProduct .information .checkout .edit span:not(:nth-child(2)) {
+  cursor: pointer;
+}
+.MainProduct .information .checkout .edit span img {
+  width: 10px;
+  height: auto;
+}
+.MainProduct .information .add {
+  width: 70%;
+  padding: 20px;
+  background-color: var(--orange);
+  color: var(--white);
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 20px 20px var(--pale-orange);
+  transition: .3s;
+}
+.MainProduct .information .add:hover {
+  opacity: .5;
+}
+.MainProduct .information .add svg {
+  margin-right: 15px;
+}
+.MainProduct .information .add svg path {
+  fill: var(--white);
+}
+.MainProduct .preview .switch {
+  display: none;
+}
+@media (max-width: 375px) {
+  .MainProduct {
+    padding: 0 0 60px 0;
+  }
+  .MainProduct .container {
+    display: block;
+    width: 100%;
+  }
+  .MainProduct .preview,
+  .MainProduct .information {
+    width: 100%;
+    padding: 0;
+  }
+  .MainProduct .preview .image {
+    margin-top: -10px;
+  }
+  .MainProduct .preview .image img {
+    border-radius: 0;
+    width: 100%;
+  }
+  .MainProduct .preview .image .switch {
+    visibility: visible;
+  }
+  .MainProduct .preview .thumbnails {
+    display: none;
+  }
+  .MainProduct .information {
+    padding: 5%;
+  }
+  .MainProduct .information .title {
+    font-size: 30px;
+  }
+  .MainProduct .information .desc {
+    color: var(--grayish-blue);
+    line-height: 1.7;
+  }
+  .MainProduct .information .price {
+    width: 100%;
+    position: relative;
+  }
+  .MainProduct .information .price .prev {
+    display: inline-block;
+    position: absolute;
+    top: 6px;
+    right: 0;
+  }
+  .MainProduct .information .checkout {
+    display: block;
+  }
+  .MainProduct .information .checkout .edit,
+  .MainProduct .information .checkout .add {
+    margin: 10px 0;
+    width: 100%;
+  }
+}
