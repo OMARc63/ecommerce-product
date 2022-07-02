@@ -34,7 +34,7 @@ function Basket () {
         {console.log(cart)}
         <button className="checkout">Checkout</button> 
       </frameElement>
-        : <p className="empty">Your cart is empty.</p> };
+        : <p className="empty">Your cart is empty.</p> }
     </div>
   )
 }
